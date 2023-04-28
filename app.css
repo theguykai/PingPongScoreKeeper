@@ -1,0 +1,172 @@
+* {
+  margin: none;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+}
+
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  background-color: #111;
+  color: #ccc;
+}
+
+.container {
+  min-height: 80vh;
+  min-width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #111;
+}
+
+img {
+  height: 20%;
+  width: 80%;
+  object-fit: contain;
+  border-radius: 50px;
+}
+
+h1 {
+  text-align: center;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+#playingTo {
+  margin: 40px 0 10px;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+#max-score {
+  width: 75px;
+  margin-left: 10px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+select:hover {
+  box-shadow: 0px 0px 7.5px yellow;
+  cursor: pointer;
+}
+
+select:active {
+  background-color: blue;
+  color: #ccc;
+}
+
+.score-container,
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.score-wrapper,
+.btn {
+  min-height: 75px;
+  min-width: 125px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  padding: -10px;
+}
+
+.score-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#who-wins {
+  text-align: center;
+}
+
+#p1Score,
+#p2Score {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.reset {
+  padding: 0px 25px;
+}
+
+.playerone,
+.playertwo,
+.reset {
+  transition: 0.1s;
+}
+
+.playerone:hover,
+.playertwo:hover,
+.reset:hover {
+  box-shadow: 0px 0px 10px #ddd;
+}
+
+@keyframes winner {
+  10% {
+    transform: scale(1.1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  40% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(1.5);
+  }
+  70% {
+    transform: scale(1.4);
+  }
+  80% {
+    transform: scale(1.3);
+  }
+  90% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #reset {
+    order: 3;
+  }
+  .playerone {
+    order: 1;
+  }
+  .playertwo {
+    order: 2;
+  }
+}
